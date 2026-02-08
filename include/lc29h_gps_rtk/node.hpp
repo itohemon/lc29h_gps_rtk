@@ -78,6 +78,8 @@ class Lc29hNode{
 
     //! Device port
     std::string device_;
+    //! UART baudrate
+    int baudrate_;
     //! dynamic model type
     std::string dynamic_model_;
     //! Fix mode type

@@ -119,6 +119,7 @@ void Lc29hNode::initializeIo(){
 
 void Lc29hNode::getRosParams() {
   node_->declare_parameter<std::string>("device",std::string("/dev/ttyUSB0"));
+  node_->declare_parameter<int>("baudrate",115200);
   node_->declare_parameter<std::string>("frame_id",std::string("gps_link"));
   node_->declare_parameter<std::string>("topicName",std::string("fix"));
 
@@ -134,6 +135,7 @@ void Lc29hNode::getRosParams() {
   node_->declare_parameter<int>("count",0);
 
   node_->get_parameter<std::string>("device",device_);
+  node_->get_parameter<std::string>("baudrate",baudrate_);
   node_->get_parameter<std::string>("frame_id",frame_id_);
   node_->get_parameter<std::string>("topicName",fix_topic_);
   node_->get_parameter<int>("rate",rate_);

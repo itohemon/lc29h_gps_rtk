@@ -66,14 +66,17 @@ typedef  boost::function<void(std::string&)> FncStr;
 
 
 //! Possible baudrates for u-blox devices
-constexpr static unsigned int kBaudrates[] = { //4800,
-                                               //9600,
+constexpr static unsigned int kBaudrates[] = { 4800,
+                                               9600,
                                                19200,
                                                38400,
                                                57600,
                                                115200,
                                                230400,
-                                               460800 };
+                                               460800,
+                                               921600,
+                                               3000000,
+                                              };
 /**
  * @brief Handles communication with and configuration of the u-blox device
  */
